@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login-Skyline Technology:</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'arial',sans-serif;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg,#ff7eb3,#ff758c);
+        }
+        /*container styling*/
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgba(255, 255,255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 8px 15px rgba(0, 0,0, 0.2);
+        }
+        /*form box*/
+        .form-box{
+            text-align: center;
+            color: #fff;
+            height: 280px;
+            width: 240px;
+        }
+        /*title*/
+        .title{
+            font-size: 2rem;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            animation: fadeIn 1s ease-in-out;
+        }
+        /*input groups*/
+        .input-group{
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        label{
+            display: block;
+            margin-bottom: 8px;
+            font-size: 1rem;
+            animation: slideIn 0.8s ease-in-out;
+        }
+        input{
+          width: 200px;
+          padding: 10px;
+          border: none;
+          border-radius: 5px;
+          outline: none;
+          background: rgba(255, 255,255, 0.8);
+          animation: popUp 0.8s ease-in-out;  
+        }
+        /*button style*/
+        .login-btn{
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background: #ff6f61;
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+        .login-btn:hover{
+            transform: scale(1.1);
+            background: #ff5349;
+        }
+        /*Animations*/
+        @keyframes fadeIn{
+            0% {opacity: 0; transform: translateY(-20px);}
+            100%{opacity: 1; transform: translateY(0);}
+        }
+        @keyframes slideIn{
+            0% {opacity: 0; transform: translateX(-20px);}
+            100%{opacity: 1; transform: translateX(0);}
+        }
+        @keyframes popUp {
+            0% {opacity: 0; transform: scale(0.8);}
+            100%{opacity: 1; transform: scale(1);}
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form-box">
+            <h2 class="title">LOGIN</h2>
+            <form action="Homepage.html" method="get">
+                <div class="input-group">
+                    <label for="username"><b>Username:</b></label>
+                    <input type="text" placeholder="username" name="username" required>
+                </div>
+                <div class="input-group">
+                    <label for="password"><b>Password:</b></label>
+                    <input type="password" placeholder="password" name="password" required>
+                </div>
+                <button type="submit" class="login-btn">Login</button>
+            </form>
+        </div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Skyline Technology</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to bottom, #1e3c72, #2a5298);
+      color: #fff;
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin: 0;
+      text-transform: uppercase;
+      animation: slide-in 1.2s ease-out;
+    }
+
+    header p {
+      margin-top: 0.5rem;
+      opacity: 0.8;
+      animation: fade-in 1.8s ease-out;
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      opacity: 0;
+      transform: translateY(50px);
+      animation: fade-up 1.5s ease-out forwards;
+    }
+
+    .portfolio-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      background-color: #222;
+    }
+
+    .portfolio-item img {
+      width: 100%;
+      display: block;
+      transition: transform 0.4s;
+    }
+
+    .portfolio-item:hover img {
+      transform: scale(1.1);
+    }
+
+    .portfolio-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.6);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transform: scale(0.9);
+      transition: all 0.3s;
+    }
+
+    .portfolio-item:hover .portfolio-overlay {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .portfolio-overlay h3 {
+      margin: 0;
+      font-size: 1.5rem;
+    }
+
+    .portfolio-overlay p {
+      font-size: 1rem;
+      margin-top: 0.5rem;
+    }
+
+    .portfolio-overlay a {
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      background: #3498db;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+      transition: background 0.3s;
+    }
+
+    .portfolio-overlay a:hover {
+      background: #1f78c1;
+    }
+
+    @keyframes slide-in {
+      from {
+        transform: translateX(-100%);
+      }
+      to {
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes fade-in {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes fade-up {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Our Portfolio</h1>
+    <p>Take a look at some of our completed projects</p>
+  </header>
+  <section class="portfolio-grid">
+    <div class="portfolio-item">
+      <img src="IMG-20240412-WA0022.jpg" alt="Project 1">
+      <div class="portfolio-overlay">
+        <h3>Project Title 1</h3>
+        <p>A brief description of this project</p>
+        <a href="#">View Details</a>
+      </div>
+    </div>
+    <div class="portfolio-item">
+      <img src="https://via.placeholder.com/300" alt="Project 2">
+      <div class="portfolio-overlay">
+        <h3>Project Title 2</h3>
+        <p>A brief description of this project</p>
+        <a href="#">View Details</a>
+      </div>
+    </div>
+    <div class="portfolio-item">
+      <img src="https://via.placeholder.com/300" alt="Project 3">
+      <div class="portfolio-overlay">
+        <h3>Project Title 3</h3>
+        <p>A brief description of this project</p>
+        <a href="#">View Details</a>
+      </div>
+    </div>
+    <div class="portfolio-item">
+      <img src="https://via.placeholder.com/300" alt="Project 4">
+      <div class="portfolio-overlay">
+        <h3>Project Title 4</h3>
+        <p>A brief description of this project</p>
+        <a href="#">View Details</a>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
